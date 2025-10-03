@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KYE with AI - Professional Audit Design System */
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 210 15% 97%;
+    --foreground: 215 25% 15%;
+    
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    
+    /* Popover System */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    
+    /* Brand Colors - Professional Blue */
+    --primary: 215 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 75% 55%;
+    --primary-dark: 215 95% 35%;
+    
+    /* Success & Analysis Colors */
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 55% 55%;
+    
+    /* Secondary Actions */
+    --secondary: 210 15% 94%;
+    --secondary-foreground: 215 25% 25%;
+    
+    /* Muted Elements */
+    --muted: 210 15% 92%;
+    --muted-foreground: 215 15% 55%;
+    
+    /* Accent for Highlights */
+    --accent: 200 85% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Warning & Destructive */
+    --warning: 35 85% 55%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 215 20% 85%;
+    --input: 215 20% 90%;
+    --ring: 215 85% 45%;
+    
+    /* AI Chat Colors */
+    --ai-message: 215 50% 95%;
+    --ai-accent: 200 85% 45%;
+    
+    /* Data Colors */
+    --data-positive: 145 65% 45%;
+    --data-negative: 0 75% 55%;
+    --data-neutral: 215 15% 65%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 45%), hsl(200 85% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(145 65% 45%), hsl(145 55% 55%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 15% 98%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px hsl(215 25% 15% / 0.1);
+    --shadow-md: 0 4px 12px hsl(215 25% 15% / 0.15);
+    --shadow-lg: 0 8px 25px hsl(215 25% 15% / 0.2);
+    --shadow-ai: 0 4px 20px hsl(200 85% 45% / 0.25);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 15% 92%;
+    
+    --card: 215 25% 10%;
+    --card-foreground: 210 15% 92%;
+    
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 15% 92%;
+    
+    --primary: 215 85% 55%;
+    --primary-foreground: 215 25% 8%;
+    --primary-light: 215 75% 65%;
+    --primary-dark: 215 95% 45%;
+    
+    --success: 145 65% 55%;
+    --success-foreground: 215 25% 8%;
+    --success-light: 145 55% 65%;
+    
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 210 15% 85%;
+    
+    --muted: 215 25% 12%;
+    --muted-foreground: 215 15% 65%;
+    
+    --accent: 200 85% 55%;
+    --accent-foreground: 215 25% 8%;
+    
+    --warning: 35 85% 65%;
+    --warning-foreground: 215 25% 8%;
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 215 25% 8%;
+    
+    --border: 215 25% 20%;
+    --input: 215 25% 15%;
+    --ring: 215 85% 55%;
+    
+    --ai-message: 215 25% 12%;
+    --ai-accent: 200 85% 55%;
+    
+    --data-positive: 145 65% 55%;
+    --data-negative: 0 75% 65%;
+    --data-neutral: 215 15% 65%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 55%), hsl(200 85% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(145 65% 55%), hsl(145 55% 65%));
+    --gradient-card: linear-gradient(180deg, hsl(215 25% 10%), hsl(215 25% 12%));
+    
+    --shadow-sm: 0 1px 3px hsl(215 25% 5% / 0.3);
+    --shadow-md: 0 4px 12px hsl(215 25% 5% / 0.4);
+    --shadow-lg: 0 8px 25px hsl(215 25% 5% / 0.5);
+    --shadow-ai: 0 4px 20px hsl(200 85% 55% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Smooth scrolling for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-md;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+}
+
+@layer components {
+  /* AI Chat Animations */
+  .ai-thinking {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  .bounce-in {
+    animation: bounceIn 0.5s var(--transition-bounce);
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
